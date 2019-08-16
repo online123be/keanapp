@@ -143,6 +143,10 @@
                                                                   "
                                                                   });
                                     });
+                        
+                                   inAppBrowserRef.addEventListener('loaderror', function(e) {
+                                        window.open("refresh.html");
+                                   });
                                     
                                     var notificationOpenedCallback = function(jsonData) {
                                         //console.log('notificationOpenedCallback: ' + JSON.stringify(jsonData));
