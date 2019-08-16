@@ -10,9 +10,6 @@
     <content src="index.html" />
     <allow-navigation href="*" />
     <access origin="*" />
-    <edit-config file="platforms/android/AndroidManifest.xml" mode="merge" target="/manifest/application">
-        <application android:usesCleartextTraffic="true" />
-    </edit-config>
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
     <allow-intent href="tel:*" />
