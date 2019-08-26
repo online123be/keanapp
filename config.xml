@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.keansuspensions.be" version="1.0.5" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+<widget id="com.keansuspensions.be" version="1.0.27" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>Kean Suspensions</name>
     <description>
         Kean Suspensions
@@ -19,7 +19,7 @@
     <allow-navigation href="*" />
     <preference name="DisallowOverscroll" value="true" />
     <preference name="android-minSdkVersion" value="16" />
-    <preference name="android-targetSdkVersion" value="26" />
+    <preference name="android-targetSdkVersion" value="28" />
     <preference name="StatusBarOverlaysWebView" value="false" />
     <preference name="LoadUrlTimeoutValue" value="20000" />
     <platform name="android">
@@ -110,6 +110,11 @@
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
     </platform>
+    <platform name="android">
+        <edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/application">
+            <application android:usesCleartextTraffic="true" />
+        </edit-config>
+    </platform>
     <plugin name="onesignal-cordova-plugin" spec="~2.4.1" />
     <plugin name="cordova-plugin-battery-status" spec="~1.2.4" />
     <plugin name="cordova-plugin-camera" spec="~2.4.1" />
@@ -120,7 +125,6 @@
     <plugin name="cordova-plugin-globalization" spec="~1.0.7" />
     <plugin name="cordova-plugin-network-information" spec="~1.3.3" />
     <plugin name="cordova-plugin-vibration" spec="~2.1.5" />
-    <plugin name="cordova-plugin-statusbar" spec="~2.4.3-dev" />
     <plugin name="cordova-plugin-whitelist" spec="^1.3.3" />
     <plugin name="cordova-plugin-inappbrowser" spec="~1.7.1" />
     <engine name="android" spec="^6.2.0" />
